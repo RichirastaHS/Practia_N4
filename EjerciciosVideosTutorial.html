@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+// Funciones
+const e1 = (string)=> {
+    if(typeof string != 'string') {
+        console.warn(`Es necesario una cadena de texto`);
+        alert('Es necesario una cadena de texto');
+    } else {
+        console.log(`El número de caracteres que contiene es: ${string.length}`);
+        return alert(`El número de caracteres que contiene es: ${string.length}`);
+    }
+}
+
+const e2 = (string, quantity)=> {
+    if(!string) {
+        console.warn(`Necesitas una cadena de texto válida`);
+        alert('Necesitas una cadena de texto válida');   
+    } else {
+        if(typeof string != 'string') {
+            console.warn(`Es necesario una cadena de texto`);
+            alert('Es necesario una cadena de texto');
+        } else {
+            quantity = quantity * 1;
+            if(quantity && typeof quantity === 'number') {
+                console.log(`El resultado del texto recortado es: ${string.substr(0,quantity)}`);
+                return alert(`El resultado del texto recortado es: ${string.substr(0,quantity)}`);
+            } else {
+                console.warn(`Necesitas un número valido o que no sea 0`);
+                alert(`Necesitas un número valido o que no sea 0`);
+            }
+        }
+    }
+
+
+const e3 = (string, separator)=> {
+    if(typeof string != 'string') {
+        console.warn('Es necesario una cadena de texto');
+        return alert('Es necesario una cadena de texto');
+    } else if(string) {
+        result = string.split(separator);
+        console.log(result);
+        return alert('Mira por consola el arreglo devuelto');
+    } else {
+        console.warn('Coloca una cadena de texto que no este vacía');
+        return alert('Coloca una cadena de texto que no este vacía');
+    };
+}
+
+const e4 = (string, repeatValue)=> {
+    if(string){
+        string = string + ' ';
+        repeatValue = repeatValue * 1;
+        if(repeatValue) {
+            console.log(string.repeat(repeatValue));
+            return alert(string.repeat(repeatValue));
+        } else {
+            console.warn('El número de repeticiones proporcionado no es válido');
+            return alert('El número de repeticiones proporcionado no es válido');
+        }
+    } else {
+        console.warn('Necesitas una cadena de texto valida');
+        return alert('Necesitas una cadena de texto valida');
+    } 
+}
+    // Solución al problema 5
+    const e5 = string => {
+        if (typeof string !== 'string') {
+            return 'Tipo de dato inválido'
+        } else {
+            let temporal = ''
+            string.split('').forEach((el, index) => temporal += string[(string.length - 1) - index])
+            return temporal
+        }
+    }
+    console.log(invert('Hola Mundo'))}
+
+    // EJERCICIO 6
+/* Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2. */
+
+    const e6 = (texto = "", palabra = "") =>
+    !texto
+        ? console.warn("introduce caracteres porfavor")
+        : texto.length <= 1
+        ? console.log("introduce al menos dos caracteres")
+        : !palabra
+        ? console.warn("introduce los caracteres a encontrar")
+        : console.log(texto.split(palabra).length - 1);
+
+
+
+// EJERCICIOS 7
+/* Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.*/
+
+    const e7 = (palabra = "") => !palabra
+        ? console.warn("por favor introduce una palabra")
+        : console.log(palabra === palabra.split("").reverse().join(""));
+
+
+//EJERCICIO 8
+/* Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5". */
+
+    const e8 = (texto = "", patron = "") => !texto
+        ? console.warn("introduce un texto valido")
+        : !patron
+        ? console.warn("introduce un patron valido")
+        : console.log(texto.split(patron).join(""));
+
+
+    </script>
+</body>
+</html>

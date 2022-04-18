@@ -7,8 +7,8 @@
 una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10. */
 const e1 = (string)=> {
     if(typeof string != 'string') {
-        console.warn(`Es necesario una cadena de texto`);
-        alert('Es necesario una cadena de texto');
+        console.warn("Es necesario una cadena de texto");
+        alert("Es necesario una cadena de texto");
     } else {
         console.log(`El número de caracteres que contiene es: ${string.length}`);
         return alert(`El número de caracteres que contiene es: ${string.length}`);
@@ -18,20 +18,20 @@ const e1 = (string)=> {
 de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola". */
 const e2 = (string, quantity)=> {
     if(!string) {
-        console.warn(`Necesitas una cadena de texto válida`);
-        alert('Necesitas una cadena de texto válida');   
+        console.warn("Necesitas una cadena de texto válida");
+        alert("Necesitas una cadena de texto válida");   
     } else {
         if(typeof string != 'string') {
-            console.warn(`Es necesario una cadena de texto`);
-            alert('Es necesario una cadena de texto'); 
+            console.warn("Es necesario una cadena de texto");
+            alert("Es necesario una cadena de texto"); 
         } else {
             quantity = quantity * 1;
             if(quantity && typeof quantity === 'number') {
                 console.log(`El resultado del texto recortado es: ${string.substr(0,quantity)}`);
                 return alert(`El resultado del texto recortado es: ${string.substr(0,quantity)}`);
             } else {
-                console.warn(`Necesitas un número valido o que no sea 0`);
-                alert(`Necesitas un número valido o que no sea 0`);
+                console.warn("Necesitas un número valido o que no sea 0");
+                alert("Necesitas un número valido o que no sea 0");
             }}}
 
 /*3) Programa una función que dada una String te devuelva un Array 
@@ -60,12 +60,12 @@ const e4 = (string, repeatValue)=> {
             console.log(string.repeat(repeatValue));
             return alert(string.repeat(repeatValue));
         } else {
-            console.warn('El número de repeticiones proporcionado no es válido');
-            return alert('El número de repeticiones proporcionado no es válido');
+            console.warn("El número de repeticiones proporcionado no es válido");
+            return alert("El número de repeticiones proporcionado no es válido");
         }
     } else {
-        console.warn('Necesitas una cadena de texto valida');
-        return alert('Necesitas una cadena de texto valida');
+        console.warn("Necesitas una cadena de texto valida");
+        return alert("Necesitas una cadena de texto valida");
     } 
 }
 /*5) Programa una función que invierta las palabras de una cadena de 
@@ -94,18 +94,18 @@ palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devo
 
 /*7) Programa una función que valide si una palabra o frase dada, es un palíndromo 
 (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true. */
-    const e7 = (palabra = "") => !palabra
+    const e7 = (palabra = "") => {!palabra
         ? console.warn("por favor introduce una palabra")
-        : console.log(palabra === palabra.split("").reverse().join(""));
+        : console.log(palabra === palabra.split("").reverse().join(""));}
 
 
 /*8) Programa una función que elimine cierto patrón de caracteres de un texto dado, 
 pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5. */
-    const e8 = (texto = "", patron = "") => !texto
+    const e8 = (texto = "", patron = "") => {!texto
         ? console.warn("introduce un texto valido")
         : !patron
         ? console.warn("introduce un patron valido")
-        : console.log(texto.split(patron).join(""));
+        : console.log(texto.split(patron).join(""));}
     </script>
 
 </body>
